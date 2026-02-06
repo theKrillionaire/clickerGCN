@@ -70,10 +70,10 @@ int main(int argc, char **argv) {
 	int cpe = 1;
 	int menuOption = 0;
 	char menuOptions[5][36] = {
-		"Upgrade 1: +100 CpE, Cost: 200\n",
-		"Upgrade 2: +500 CpE, Cost: 1000\n",
-		"Upgrade 3: +1000 CpE, Cost: 2000\n",
-		"Upgrade 4: +10000 CpE, Cost: 20000\n",
+		"Upgrade 1: +1 CpE, Cost: 50\n",
+		"Upgrade 2: +2 CpE, Cost: 100\n",
+		"Upgrade 3: +10 CpE, Cost: 500\n",
+		"Upgrade 4: +100 CpE, Cost: 5,000\n",
 		"WIN!!! Cost: 1,024,024"
 	};
 	
@@ -111,10 +111,10 @@ int main(int argc, char **argv) {
 			} 
 		} else if(room == SHOP) {
 			if (buttonsDown &PAD_BUTTON_A) {
-				if(menuOption == 0 && clicks >= 200) { cpe += 100; clicks -= 200; }
-				else if(menuOption == 1 && clicks >= 1000) { cpe += 500; clicks -= 1000; }
-				else if(menuOption == 2 && clicks >= 2000) { cpe += 1000; clicks -= 2000; }
-				else if(menuOption == 3 && clicks >= 20000) { cpe += 10000; clicks -= 20000; }
+				if(menuOption == 0 && clicks >= 1) { cpe += 100; clicks -= 200; }
+				else if(menuOption == 1 && clicks >= ) { cpe += 500; clicks -= 1000; }
+				else if(menuOption == 2 && clicks >= 2) { cpe += 1000; clicks -= 2000; }
+				else if(menuOption == 3 && clicks >= 10) { cpe += 10000; clicks -= 20000; }
 				else if(menuOption == 4 && clicks >= 1024024) { win(&clicks, &cpe); }
 			}
 		}
